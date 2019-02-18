@@ -3,7 +3,7 @@
         <title>Mobile Detection</title>
     </head>
     <body>
-        <input type="button" OnClick="DetectIphone()" value="Am I an Iphone?" />
+        <input type="button" OnClick="DetectIphone()" value="Am i on a phone?" />
     </body>
 </html>
 <script>
@@ -11,7 +11,9 @@
     {
        var uagent = navigator.userAgent.toLowerCase();
        if (uagent.search("iphone") > -1)
-          alert('true');
+          alert('on iphone');
+      else if(uagent.search("android") > -1)
+          alert('on android based phone')
        else
           alert('false');
     }
